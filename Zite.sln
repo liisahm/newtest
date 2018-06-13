@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zite", "Zite\Zite.csproj", "{83148095-6466-4716-850D-C9934C139362}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VueZite", "VueZite\VueZite.csproj", "{8C8F95AD-8790-46F5-8A38-3DA00837F72C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83148095-6466-4716-850D-C9934C139362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83148095-6466-4716-850D-C9934C139362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83148095-6466-4716-850D-C9934C139362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83148095-6466-4716-850D-C9934C139362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C8F95AD-8790-46F5-8A38-3DA00837F72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C8F95AD-8790-46F5-8A38-3DA00837F72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C8F95AD-8790-46F5-8A38-3DA00837F72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C8F95AD-8790-46F5-8A38-3DA00837F72C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF43D0B3-B24E-4BFA-A333-EED09A43BD80}
+	EndGlobalSection
+EndGlobal
