@@ -106,8 +106,7 @@ body {
 
 .columns-fix {
   float: left;
-  width: 33.33%;
-  height: 500px;
+  /*height: 500px;*/
   padding: 10px;
 }
 
