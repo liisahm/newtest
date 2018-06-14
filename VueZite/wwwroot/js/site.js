@@ -25,5 +25,12 @@ var app = new Vue({
 
 
 Vue.component('modal', {
-  template: '#modal-template'
+  template: '#modal-template',
+  components: {
+    'b-modal': bModal
+  },
+  directives: {
+    'b-modal': bModalDirective
+  }
+
 });

@@ -11,6 +11,13 @@
         src="https://unpkg.com/axios@0.18.0/dist/axios.js">
 </script>
 
+<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
+
+<script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script type="text/x-template" id="modal-template">
@@ -44,9 +51,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
 <link rel="stylesheet" href="/css/site.css">
-<div class="container" id="app">
-  <div class="row">
-    <div class="columns medium-3 columns-fix" v-for="item in news">
+<b-container class="container" id="app">
+  <b-row>
+    <b-col sm="4" v-for="item in news :key=" item.url"">
       <div class="card card-margin">
         <div class="card-divider"> {{ item.title }} </div>
         <img :src="item.lead_image_url" />
@@ -55,11 +62,25 @@
           <button id="show-modal" v-on:click="showModal = true; oneNews = item" class="link"> read more...</button>
         </div>
       </div>
-    </div>
-  </div>
+  </b-row>
+
+  @*<div class="container" id="app">*@
+  @*<div class="row">
+      <div class="col-md-3 col-sm-1 columns-fix" v-for="item in news">
+        <div class="card card-margin">
+          <div class="card-divider"> {{ item.title }} </div>
+          <img :src="item.lead_image_url" />
+          <div class="card-section">
+            <div class="element"> {{ item.dek }} </div>
+            <button id="show-modal" v-on:click="showModal = true; oneNews = item" class="link"> read more...</button>
+          </div>
+        </div>
+      </div>
+    </div>*@
   <modal v-bind:title="oneNews.title"
          v-if="showModal" v-on:close="showModal = false">
     <h3 slot="header">{{oneNews.title}}</h3>
     <div slot="body" v-html="oneNews.content"></div>
   </modal>
-</div>
+  @*</div>*@
+
