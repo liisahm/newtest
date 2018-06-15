@@ -20,7 +20,7 @@ var app = new Vue({
         app.oneNews = response.data[0];
       });
     }
-  }
+  },
 });
 
 
