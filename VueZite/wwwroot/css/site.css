@@ -88,6 +88,12 @@ body {
   height: 100%;
 }
 
+/*.blockquoute, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
+  margin: 0px;
+  padding: 10px;
+  padding-bottom: 30px;
+}*/
+
 .modal-default-button {
   float: right;
   color: #000
