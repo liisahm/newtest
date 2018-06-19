@@ -52,16 +52,16 @@
 <div class="container" id="app">
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-lg-3 " v-for="item in news">
-      <div class="card card-margin">
-        <div class="card-divider"> {{ item.title }} </div>
-        <img :src="item.lead_image_url" />
-        <div class="card-section">
-          <div class="element"> {{ item.dek }} </div>
-          <button id="show-modal" v-on:click="showModal = true; oneNews = item" class="link"> read more...</button>
-        </div>
+        <div class="card card-margin">
+          <div class="card-divider"> {{ item.title }} </div>
+          <img class="card-img-top" :src="item.lead_image_url" />
+          <div class="card-section">
+            <div class="element"> {{ item.dek }} </div>
+            <button id="show-modal" v-on:click="showModal = true; oneNews = item" class="link"> read more...</button>
+          </div>
       </div>
     </div>
-  </div>
+    </div>
   <modal v-bind:title="oneNews.title"
          v-if="showModal" v-on:close="showModal = false">
     <h3 slot="header">{{oneNews.title}}</h3>
