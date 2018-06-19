@@ -1,6 +1,6 @@
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* Wrapping element */
@@ -18,21 +18,22 @@ body {
 
 /* Make .svg files in the carousel display properly in older browsers */
 .carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+  width: 100%;
 }
 
 /* QR code generator */
 #qrCode {
-    margin: 15px;
+  margin: 15px;
 }
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+  /* Hide captions */
+  .carousel-caption {
+    display: none;
+  }
 }
+
 .card-margin {
   margin-top: 25px;
 }
@@ -56,7 +57,7 @@ body {
 
 .modal-container {
   width: 80%;
-  margin: 10px auto;
+  margin: 0px auto;
   padding: 10px 20px;
   background-color: #fff;
   border-radius: 2px;
@@ -67,19 +68,18 @@ body {
   max-height: 100%;
 }
 
-.modal-header h3 {
-  width: 80%;
-  margin-top: 250px;
-  color: #fff
-    /*#42b983*/;
+.modal-header {
+  width: 100%;
+  margin: 0px auto;
+  padding: 10px 20px;
   background-color: #000;
-  padding: 20px;
+  color: #fff;
+  margin-top: 250px;
   box-shadow: 2px 70px 8px rgba(0, 0, 0, .33);
-  text-align:center
+  text-align: center
 }
 
 .modal-body {
-  margin: 10px;
   padding: 10px 20px;
   border-radius: 2px;
   margin: 15px;
@@ -128,7 +128,7 @@ body {
   }
 
 .columns-fix {
-  float: left;
+  float: inherit;
   /*height: 500px;*/
   padding: 10px;
 }
