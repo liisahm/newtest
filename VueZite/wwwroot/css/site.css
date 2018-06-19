@@ -36,6 +36,8 @@ body {
 
 .card-margin {
   margin-top: 25px;
+  /*width: 18rem;
+  display: flex;*/
 }
 
 .modal-mask {
@@ -56,15 +58,20 @@ body {
 }
 
 .modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 80%;
+  height: 100%;
+  padding: 20px 20px 75px 20px;
+  transform: translate(-50%, -50%);
   margin: 0px auto;
-  padding: 10px 20px;
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
-  overflow-y: auto;
+  /*overflow-y: auto;*/
   max-height: 100%;
 }
 
@@ -74,35 +81,38 @@ body {
   padding: 10px 20px;
   background-color: #000;
   color: #fff;
-  margin-top: 250px;
-  box-shadow: 2px 70px 8px rgba(0, 0, 0, .33);
+  box-shadow: 2px 10px 8px rgba(0, 0, 0, .33);
   text-align: center
 }
 
 .modal-body {
   padding: 10px 20px;
+  padding-bottom: 30px;
   border-radius: 2px;
   margin: 15px;
   height: auto;
   padding-bottom: 50px;
   height: 100%;
+  overflow: auto;
 }
 
-/*.blockquoute, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
-  margin: 0px;
-  padding: 10px;
-  padding-bottom: 30px;
-}*/
-
 .modal-default-button {
-  float: right;
-  color: #000
-  /*#42b983*/;
+  float:right;
+  color: #000;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  padding: 10px 30px
+  padding: 10px 30px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+  .modal-default-button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #e5ece5;
+  }
 
 /*
  * The following styles are auto-applied to elements with
@@ -127,11 +137,6 @@ body {
     transform: scale(1.1);
   }
 
-.columns-fix {
-  float: inherit;
-  /*height: 500px;*/
-  padding: 10px;
-}
 
 .element {
   display: block;

@@ -18,6 +18,7 @@
   <transition name="modal">
     <div class="modal-mask">
       <div class="modal-wrapper">
+        <div class="modal-container">
 
           <div class="modal-header">
             <slot name="header">
@@ -32,15 +33,14 @@
             </slot>
           </div>
 
-          <div class="modal-container">
-            <div class="modal-body">
-              <slot name="body">
-              </slot>
-            </div>
+          <div class="modal-body">
+            <slot name="body">
+            </slot>
           </div>
-
         </div>
+
       </div>
+    </div>
   </transition>
 </script>
 
@@ -52,20 +52,19 @@
 <div class="container" id="app">
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-lg-3 " v-for="item in news">
-      @*<div class="col-md-4 columns-fix" v-for="item in news">*@
-        <div class="card card-margin">
-          <div class="card-divider"> {{ item.title }} </div>
-          <img :src="item.lead_image_url" />
-          <div class="card-section">
-            <div class="element"> {{ item.dek }} </div>
-            <button id="show-modal" v-on:click="showModal = true; oneNews = item" class="link"> read more...</button>
-          </div>
+      <div class="card card-margin">
+        <div class="card-divider"> {{ item.title }} </div>
+        <img :src="item.lead_image_url" />
+        <div class="card-section">
+          <div class="element"> {{ item.dek }} </div>
+          <button id="show-modal" v-on:click="showModal = true; oneNews = item" class="link"> read more...</button>
         </div>
       </div>
     </div>
-    <modal v-bind:title="oneNews.title"
-           v-if="showModal" v-on:close="showModal = false">
-      <h3 slot="header">{{oneNews.title}}</h3>
-      <div slot="body" v-html="oneNews.content"></div>
-    </modal>
   </div>
+  <modal v-bind:title="oneNews.title"
+         v-if="showModal" v-on:close="showModal = false">
+    <h3 slot="header">{{oneNews.title}}</h3>
+    <div slot="body" v-html="oneNews.content"></div>
+  </modal>
+</div>
