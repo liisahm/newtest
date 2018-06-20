@@ -149,3 +149,11 @@ body {
 .link {
   color: darkblue;
 }
+
+.row {
+  display:flex;
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items:flex-start;
+}
