@@ -34,8 +34,20 @@ body {
   }
 }
 
-.card-margin {
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
   margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  height: auto;
 }
 
 .modal-mask {
@@ -69,7 +81,6 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
-  /*overflow-y: auto;*/
   max-height: 100%;
 }
 
@@ -112,15 +123,6 @@ body {
     border: 2px solid #e5ece5;
   }
 
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- */
-
 .modal-enter {
   opacity: 0;
 }
@@ -142,8 +144,8 @@ body {
   overflow: hidden;
   word-wrap: break-word;
   text-overflow: ellipsis;
-  max-height: 50px;
-  line-height: 16px;
+  max-height: 30px;
+  line-height: 15px;
 }
 
 .link {
@@ -156,4 +158,22 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items:flex-start;
+}
+
+.wrapper {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 10px;
+  grid-template-rows:auto;
+}
+
+.card-section {
+  display: block;
+  max-height: 50px;
+}
+
+.card-divider {
+  display: block;
+  height: 80px;
 }
