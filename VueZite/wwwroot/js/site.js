@@ -1,6 +1,6 @@
 // Write your Javascript code.
 
-var url = 'http://localhost:49866/api/news';
+var url = 'https://localhost:49866/api/news';
 
 var app = new Vue({
   el: '#app',
